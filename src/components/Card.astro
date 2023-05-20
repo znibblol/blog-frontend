@@ -3,13 +3,16 @@ export interface Props {
 	title: string;
 	body: string;
 	href: string;
+	imgurl: string;
+	imgtitle: string;
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, body, imgurl, imgtitle } = Astro.props;
 ---
 
 <li class="link-card">
 	<a href={href}>
+		<img src={imgurl} alt={imgtitle} title={imgtitle} class="card-image">
 		<h2>
 			{title}
 			<span>&rarr;</span>
@@ -53,11 +56,19 @@ const { href, title, body } = Astro.props;
 		margin-bottom: 0;
 		color: #444;
 	}
+	.card-image {
+		width: 100%;
+		height: auto;
+		transition: all 500ms;
+	}
 	.link-card:is(:hover, :focus-within) {
 		background-position: 0;
 		background-image: var(--accent-gradient);
 	}
 	.link-card:is(:hover, :focus-within) h2 {
 		color: rgb(var(--accent));
+	}
+	.link-card:is(:hover, :focus-within) .card-image {
+		transform: scale(1.05);
 	}
 </style>

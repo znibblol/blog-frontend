@@ -5,46 +5,121 @@ import Card from '../components/Card.astro';
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<h1>Hello <span class="text-gradient">World</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+		<div class="hero">
+			<h1 class="text-center">Hello I'm <span class="text-gradient">[ Emil Malm ]</span></h1>
+		</div>
+		<div class="content">
+			<ul role="list" class="link-card-grid">
+				<Card
+					href="https://docs.astro.build/"
+					title="Documentation"
+					body="Learn how Astro works and explore the official API docs."
+					imgurl="https://source.unsplash.com/random/400x500"
+					imgtitle="Unsplash random image"
+				/>
+				<Card
+					href="https://astro.build/integrations/"
+					title="Integrations"
+					body="Supercharge your project with new frameworks and libraries."
+					imgurl="https://source.unsplash.com/random/401x500"
+					imgtitle="Unsplash random image"
+				/>
+				<Card
+					href="https://astro.build/themes/"
+					title="Themes"
+					body="Explore a galaxy of community-built starter themes."
+					imgurl="https://source.unsplash.com/random/402x500"
+					imgtitle="Unsplash random image"
+				/>
+				<Card
+					href="https://astro.build/chat/"
+					title="Community"
+					body="Come say hi to our amazing Discord community. ❤️"
+					imgurl="https://source.unsplash.com/random/403x500"
+					imgtitle="Unsplash random image"
+				/>
+				<Card
+					href="https://docs.astro.build/"
+					title="Documentation"
+					body="Learn how Astro works and explore the official API docs."
+					imgurl="https://source.unsplash.com/random/400x500"
+					imgtitle="Unsplash random image"
+				/>
+				<Card
+					href="https://astro.build/integrations/"
+					title="Integrations"
+					body="Supercharge your project with new frameworks and libraries."
+					imgurl="https://source.unsplash.com/random/401x500"
+					imgtitle="Unsplash random image"
+				/>
+				<Card
+					href="https://astro.build/themes/"
+					title="Themes"
+					body="Explore a galaxy of community-built starter themes."
+					imgurl="https://source.unsplash.com/random/402x500"
+					imgtitle="Unsplash random image"
+				/>
+				<Card
+					href="https://astro.build/chat/"
+					title="Community"
+					body="Come say hi to our amazing Discord community. ❤️"
+					imgurl="https://source.unsplash.com/random/403x500"
+					imgtitle="Unsplash random image"
+				/>
+				<Card
+					href="https://docs.astro.build/"
+					title="Documentation"
+					body="Learn how Astro works and explore the official API docs."
+					imgurl="https://source.unsplash.com/random/400x500"
+					imgtitle="Unsplash random image"
+				/>
+				<Card
+					href="https://astro.build/integrations/"
+					title="Integrations"
+					body="Supercharge your project with new frameworks and libraries."
+					imgurl="https://source.unsplash.com/random/401x500"
+					imgtitle="Unsplash random image"
+				/>
+				<Card
+					href="https://astro.build/themes/"
+					title="Themes"
+					body="Explore a galaxy of community-built starter themes."
+					imgurl="https://source.unsplash.com/random/402x500"
+					imgtitle="Unsplash random image"
+				/>
+				<Card
+					href="https://astro.build/chat/"
+					title="Community"
+					body="Come say hi to our amazing Discord community. ❤️"
+					imgurl="https://source.unsplash.com/random/403x500"
+					imgtitle="Unsplash random image"
+				/>
+			</ul>
+		</div>
 	</main>
 </Layout>
 
 <style>
 	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
+		/* height: 5000px; */
 	}
 	h1 {
-		font-size: 3rem;
+		font-size: 6vw;
 		font-weight: 800;
 		margin: 0;
+	}
+	.hero {
+		height: 15vw;
+		width: 100vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: rgb(185,255,247);
+		background: linear-gradient(90deg, rgba(185,255,247,1) 0%, rgba(145,232,255,1) 35%, rgba(160,255,209,1) 100%);
+	}
+	.content {
+		max-width: 80%;
+		margin: 0 auto;
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
@@ -52,6 +127,9 @@ import Card from '../components/Card.astro';
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
 		background-position: 0%;
+	}
+	.text-center {
+		text-align: center;
 	}
 	.instructions {
 		line-height: 1.6;
@@ -74,7 +152,7 @@ import Card from '../components/Card.astro';
 	}
 	.link-card-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
 		gap: 1rem;
 		padding: 0;
 	}
